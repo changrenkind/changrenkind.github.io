@@ -2,95 +2,220 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<title>汪长仁个人网站</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/common.css" rel="stylesheet" />
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/base.js"></script>
+<link href="css/index.css" rel="stylesheet" />
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/base.js"></script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
-	<!--导航-->
-	<div class="nav">
-        	<ul class="clearFix">
-            	<li class="fl active"><a href="javascript:;">首页</a></li>
-            	<li class="fl"><a href="javascript:;">个人技能</a></li>
-            	<li class="fl"><a href="javascript:;">效果</a></li>
-            	<li class="fl"><a href="javascript:;">项目经验</a></li>
-            	<li class="fl"><a href="javascript:;">请联系我</a></li>
-            </ul>
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-inverse navbar-fixed-top navbar-static-top" role="navigation">
+        <!-- 导航 -->
+        <div class="container ">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+              <ul class="nav navbar-nav" id="globalnav">
+                <li class="active"><a href="#banner">首页</a>
+                </li>
+                <li><a href="#banner">页面</a>
+                </li>
+                <li><a href="#skill">个人技能</a>
+                </li>
+                <li><a href="#project">我的作品</a>
+                </li>
+                <li><a href="#callme">联系方式</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-	<div id="box" class="box">
-        <!--首页-->
-        <div class="home page_1">
-        	
+    <div class="banner" id="banner">
+    	<div class="container">
+        	<div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <h2>欢迎来到我的网站</h2>
+                <p id="message">我的名字是汪长仁，是一名前端开发工程师，非常感谢您的访问</p>
+				<p>这个网站里面主要是我的代码的一些成果的展示，包括一些原生JS的效果等...</p>
+      		</div>
+            </div>
         </div>
-        <!--个人技能-->
-        <div class="skill page_2">
-        	
+    </div>
+    <div class="skill" id="skill">
+    	<div class="container">
+        	 <div class="skill_tit">
+             	<h3>个人技能</h3>
+             </div>
+        	<div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                	<div class="list_box">
+                 		<h3 class="skill_list">HTML</h3>
+                    </div>
+                    <p>熟练掌握HTML,了解HTML5<br />编写符合W3C标准的网页,还原视觉设计</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                	<div class="list_box">
+                 		<h3 class="skill_list">CSS</h3>
+                    </div>
+                    <p>熟练掌握CSS,熟悉浏览器兼容性解决方案</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                	<div class="list_box">
+                 		<h3 class="skill_list">JavaScript</h3>
+                    </div>
+                    <p>熟练掌握JavaScript及相关类库(JQuery)的使用，<br /> 熟悉面向对象编程方</p>
+                </div>
+            </div>
         </div>
-        <!--JS效果-->
-        <div class="page_3">
-        	<div class="effect" id="effect">
-            	<ul class="clearFix">
-                	<li>
-                    	<img src="images/img1.jpg" alt="" />
-                        <a href="javascript:;"></a>
+    </div>
+    <div class="project" id="project">
+    	<div class="container">
+        	<div class="skill_tit">
+             	<h3>个人作品</h3>
+            </div>
+        	<div class="row">
+            	<ul id="lagou">
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/tanliqiu.jpg) no-repeat center;">
+                                <a href="ballCrash.html" target="_blank">
+                                	小球运动
+                                </a>		
+                            </div>
+                            <p>小球效果</p>
+                         </div>
                     </li>
-                	<li>
-                    	<img src="images/img2.jpg" alt="" />
-                        <a href="javascript:;"></a>
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/lagou.jpg) no-repeat center;">
+                                <a href="lagou.html" target="_blank">
+                                	拉勾穿墙
+                                </a>		
+                            </div>
+                            <p>拉勾穿墙</p>
+                         </div>
                     </li>
-                	<li>
-                    	<img src="images/img3.jpg" alt="" />
-                        <a href="javascript:;"></a>
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/pubuliu.jpg) no-repeat center;">
+                                <a href="瀑布流.html" target="_blank">
+                                	瀑布流
+                                </a>		
+                            </div>
+                            <p>瀑布流</p>
+                         </div>
                     </li>
-                	<li>
-                    	<img src="images/img4.jpg" alt="" />
-                        <a href="javascript:;"></a>
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/shoufengqin.jpg) no-repeat center;">
+                                <a href="shoufengqin.html" target="_blank">
+                                	手风琴
+                                </a>		
+                            </div>
+                            <p>手风琴</p>
+                         </div>
                     </li>
-                	<li>
-                    	<img src="images/img5.jpg" alt="" />
-                        <a href="javascript:;"></a>
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/lifangti.jpg) no-repeat center;">
+                                <a href="lifangti.html" target="_blank">
+                                立方体拖拽
+                                </a>		
+                            </div>
+                            <p>立方体拖拽</p>
+                         </div>
                     </li>
-                	<li>
-                    	<img src="images/img6.jpg" alt="" />
-                        <a href="javascript:;"></a>
-                    </li>
-                	<li>
-                    	<img src="images/img7.jpg" alt="" />
-                        <a href="javascript:;"></a>
-                    </li>
-                	<li>
-                    	<img src="images/img8.jpg" alt="" />
-                        <a href="javascript:;"></a>
+                	<li class="col-sm-12 col-md-4 col-lg-4">
+                    	<div class="pro_box">
+                            <div class="pro_li" style="background:url(images/pingbao.png) no-repeat center;">
+                                <a href="pingbao.html" target="_blank">
+                                屏保
+                                </a>		
+                            </div>
+                            <p>屏保</p>
+                         </div>
                     </li>
                 </ul>
-                <a id="change" href="javascript:;">换一换</a>
             </div>
-           
-       	</div>
-        <!--项目经验-->
-        <div class="page_4"></div>
-        <!--请联系我-->
-        <div class="page_5"></div>
-   	</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        </div>
+    </div>
+    <div class="callme" id="callme">
+    	<div class="container">
+        	<div class="skill_tit">
+             	<h3>联系方式</h3>
+            </div>
+            <div class="row contact-details">
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><span>地址/Address</span></h2>
+                  <p>上海市徐汇区</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><span>手机号码/Phone</span></h2>
+                  <p>13517983962</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><span>邮箱/Email</span></h2>
+                  <p>changrenkind@sina.com</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 credit">
+            <p>再次感谢你的访问！！</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

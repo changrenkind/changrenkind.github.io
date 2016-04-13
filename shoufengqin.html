@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手风琴</title>
+<style>
+* {margin:0; padding:0; list-style:none;}
+#div1 {width:940px; height:305px; border:1px solid black; margin:10px auto; position:relative; overflow:hidden;}
+#div1 span {width:20px; height:305px; display:block; position:absolute; left:0; top:0;}
+#div1 div {width:840px; height:305px; position:absolute; left:0; top:0; background:#CCC;}
+</style>
+<script src="js/move.js"></script>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aDiv=oDiv.children;
+	for(var i=1;i<aDiv.length;i++){
+		aDiv[i].style.left=aDiv[i].offsetWidth+20*(i-1)+'px';
+			
+	}
+	//onmouseover,遍历所有div,拿i和this.index,<=this.index的←
+	for(var i=0;i<aDiv.length;i++){
+		(function(index){
+			aDiv[i].onmouseover=function(){
+				for(var i=0;i<aDiv.length;i++){
+					if(i<=index){
+						//←	
+						//aDiv[i].style.left=i*20+'px';
+						move(aDiv[i],{left:i*20},{time:1000});
+					}else{
+						//→	
+						//aDiv[i].style.left=aDiv[i].offsetWidth+20*(i-1)+'px';
+						move(aDiv[i],{left:aDiv[i].offsetWidth+20*(i-1)},{time:1000});
+					}
+				}
+			};	
+		})(i);
+	}
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<div style="background:#F0C;" class="active">
+    	<img src="images/0.jpg" />
+        <span style="background:#F0C;">第0项</span>
+    </div>
+	<div style="background:#F00;">
+        <img src="images/1.jpg" />
+        <span style="background:#F00;">第1项</span>
+    </div>
+	<div style="background:#0F0;">
+        <img src="images/2.jpg" />
+        <span style="background:#0F0;">第2项</span>
+    </div>
+	<div style="background:#00F;">
+        <img src="images/3.jpg" />
+        <span style="background:#00F;">第3项</span>
+    </div>
+	<div style="background:#F0F;">
+        <img src="images/0.jpg" />
+        <span style="background:#F0F;">第4项</span>
+    </div>
+	<div style="background:#0FF;">
+        <img src="images/1.jpg" />
+        <span style="background:#0FF;">第5项</span>
+    </div>
+</div>
+</body>
+</html>

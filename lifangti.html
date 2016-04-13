@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0; list-style:none; }
+#box{ position:relative;left:0; top:0; width:200px; height:200px; background:#ccc; margin:100px auto; transform-style:preserve-3d;transition:1s all ease;
+transform:perspective(800px) rotateX(0deg) rotateY(0deg);
+ }
+#box div{ position:absolute; left:0; top:0; width:198px; height:198px; border:1px solid #333; background:#00b294; text-align:center; line-height:200px; }
+#box div.f{ transform:translateZ(100px);}
+#box div.back{ transform:translateZ(-100px);}
+#box div.l{ transform:rotateY(-90deg) translateZ(100px) ;}
+#box div.r{ transform: rotateY(90deg) translateZ(100px);}
+#box div.t{ transform:rotateX(90deg) translateZ(100px) ;}
+#box div.b{ transform:rotateX(-90deg) translateZ(100px) ;}
+#box:active{ transform:perspective(800px) rotateX(-60deg) rotateY(-60deg);}
+</style>
+<script>
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var y=0;
+	var x=0;
+	oBox.onmousedown=function(ev){
+		var disX=ev.clientX-y;
+		var disY=ev.clientY-x;
+		document.onmousemove=function(ev){
+			y=ev.clientX-disX;	
+			x=ev.clientY-disY;
+			oBox.style.transform='perspective(800px) rotateX('+-x+'deg) rotateY('+y+'deg)';	
+		};
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;	
+		};	
+		return false;
+	};	
+};
+</script>
+</head>
+
+<body>
+<div id="box">
+	<div class="f">前</div>
+	<div class="back">后</div>
+	<div class="l">左</div>
+	<div class="r">右</div>
+	<div class="t">上</div>
+	<div class="b">下</div>
+</div>
+</body>
+</html>
